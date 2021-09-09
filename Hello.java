@@ -1,6 +1,5 @@
-/**
- * Hello
- */
+import database.MysqlAction;
+
 public class Hello {
 
     public static void main(String[] args) {
@@ -12,6 +11,9 @@ public class Hello {
         LocalAction.printx("就職頑張れ");
 
         print("就活キックオフ");
+
+        MysqlAction ma = new MysqlAction();
+        ma.loadMySQL();
     }
 
     private static void print( String out ) {

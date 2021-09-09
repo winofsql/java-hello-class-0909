@@ -1,4 +1,5 @@
 public class LocalAction {
+
     // コンストラクタ
     public LocalAction() {
         super();
