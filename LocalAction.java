@@ -6,10 +6,10 @@ public class LocalAction {
     }
 
     public void print( String out ) {
-        System.out.println( out );
+        Hello.printStatic( out );
     }
 
-    public static void printx( String out ) {
+    public static void printStatic( String out ) {
         System.out.println( out );
     }
 }
