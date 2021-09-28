@@ -3,24 +3,23 @@ import database.MysqlAction;
 public class Hello {
 
     public static void main(String[] args) {
-        System.out.println("こんにちは");
 
         LocalAction la = new LocalAction();
-        la.print("卒進頑張れ");
+        la.print("LocalAction インスタンス => Hello public static");
 
-        LocalAction.printx("就職頑張れ");
+        LocalAction.printStatic("LocalAction static");
 
-        print("就活キックオフ");
+        Hello.printlocalStatic("Hello static( private )");
 
         MysqlAction ma = new MysqlAction();
         ma.loadMySQL();
     }
 
-    private static void print( String out ) {
+    private static void printlocalStatic( String out ) {
         System.out.println( out );
     }
 
-    public static void print2( String out ) {
+    public static void printStatic( String out ) {
         System.out.println( out );
     }
 
