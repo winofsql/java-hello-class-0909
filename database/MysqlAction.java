@@ -20,18 +20,19 @@ public class MysqlAction {
 
         try {
             // 接続
-            conn = (Connection) DriverManager.getConnection(
-                "jdbc:mysql://localhost/lightbox?user=root&password=&characterEncoding=UTF-8"
-            );
+            conn = (Connection) DriverManager
+                    .getConnection("jdbc:mysql://localhost/lightbox?user=root&password=&characterEncoding=UTF-8");
 
             // ステートメント
             stmt = (Statement) conn.createStatement();
+
             // SQL 実行
             rs = stmt.executeQuery("SELECT * FROM 社員マスタ");
 
             // 行を読み出す
-            while( rs.next() ) {
-                System.out.println(rs.getString("社員コード"));
+            while (rs.next()) {
+                System.out.print(rs.getString("社員コード"));
+                System.out.print(" : ");
                 System.out.println(rs.getString("氏名"));
             }
 
